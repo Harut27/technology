@@ -1,15 +1,31 @@
-import React from "react"
-import "./style.scss"
+import React from "react";
+// import SocialMediaIcons from 'react-social-media-icons';
+
+import "./style.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 const Burgerbar = ()=>{
     return(
-        <div className="burgerbar">
+        <div className="burgerbar centered">
             <div className="burgerbar-logo">
-                <span className="burgerbar-logo-text">CREATIVE.</span>
-                <span className="">The source for Tech Buying Advice</span>
+                <span className="burgerbar-logo-text">techradar</span>
+                <span className="dot">.</span>
+                <span className="strapline">{"The source for Tech Buying Advice".toUpperCase()}</span>
             </div>
-            <div></div>
+            <div className="burgerbar-section">
+                <div className="burgerbar-language">
+
+                </div>
+                <div className="burgerbar-social">
+                    {/* <SocialMediaIcons/> */}
+                </div>
+                <div className="burgerbar-search">
+                    <span className="burgerbar-search-text">Search</span>
+                    <FontAwesomeIcon icon={faSearch}/>
+                </div>
+            </div>
         </div>
     )
 }

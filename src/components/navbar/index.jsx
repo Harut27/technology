@@ -4,7 +4,7 @@ import Burgerbar from "./burgerbar";
 
 const Navbar = ()=>{
     return(
-        <div>
+        <div className="navbar">
             <Burgerbar/>
             <NavbarLink/>
         </div>

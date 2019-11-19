@@ -4,6 +4,7 @@
     height: 60px;
     background: $blue;
     display: flex;
+    justify-content: space-between;
     
     .burgerbar-logo {
         display: flex;
@@ -11,9 +12,39 @@
         align-items: center;
 
         .burgerbar-logo-text{
-            font-size: 25px;
-            font-weight: bold;
+            font-size: 35px;
+            font-weight: bolder;
             color: #fff;
+            position: relative;
+        }
+
+        .strapline{
+            font-size: 12px;
+            margin: 10px 0 0 10px;
+            color: #fff;
+        }
+
+        .dot{
+            color: $red;
+            font-size: 60px;
+            position: absolute;
+            left: 180px;
+            top: -18px;
+        }
+    }
+
+    .burgerbar-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .burgerbar-search{
+            color: #fff;
+            
+            .burgerbar-search-text{
+                margin: 10px;
+                font-size: 14px;
+            }
         }
     }
 }

@@ -1,9 +1,29 @@
 @import "../../../scss/_variables.scss";
 
-.navbar-link-container {
-    height: 50px;
+.navbar-link-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    background: $blue;
+    height: 50px;
     align-items: center;
-    background: $dark-blue;
+
+    .navbar-link-pro{
+        height: 100%;
+        width: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fffcf5;
+        background: #8c2b5e;
+    }
+}
+
+.links{
+    display: flex;
+}
+
+.navbar-link,
+.home-icon {
+    color: #fffcf5;
+    margin: 15px;
 }
