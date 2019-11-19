@@ -1,0 +1,19 @@
+@import "../../../scss/_variables.scss";
+
+.burgerbar{
+    height: 60px;
+    background: $blue;
+    display: flex;
+    
+    .burgerbar-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .burgerbar-logo-text{
+            font-size: 25px;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+}
