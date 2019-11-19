@@ -6,7 +6,7 @@ import "./style.scss"
 
 
 const NavbarLink = props => {
-  const navbarManu = ["Reviews", "How To", "Phones", "TVs", "Laptops", "Photography", "Deals"];
+  const navbarManu = ["How To", "Phones", "TVs", "Laptops", "Photography"];
 
   return (
     <div className="navbar-link-container">
