@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss"
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 
 const NavbarLink = props => {
@@ -10,22 +10,27 @@ const NavbarLink = props => {
 
   return (
     <div className="navbar-link-container">
-      <div className="links">
-        {navbarManu.map((navbarMenuLink, index) => {
-          return (
-            <div
-              className={`navbar-link navbar-${navbarMenuLink.toLowerCase().replace(/\s/g, '')}`}
-              key={index}
-            >
-              <Link to={`/${navbarMenuLink.toLowerCase()}`}>
-                {navbarMenuLink}
-              </Link>
-            </div>
-          );
-        })}
-      </div>
-      <div className="navbar-link-pro">
-        <span>Pro</span>
+      <div className="centered navbar-link-wrapper">
+        <div className="home-icon">
+          <FontAwesomeIcon icon={faHome}/>
+        </div>
+        <div className="links">
+          {navbarManu.map((navbarMenuLink, index) => {
+            return (
+              <div
+                className={`navbar-link navbar-${navbarMenuLink.toLowerCase().replace(/\s/g, '')}`}
+                key={index}
+              >
+                <Link to={`/${navbarMenuLink.toLowerCase()}`}>
+                  {navbarMenuLink}
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+        <div className="navbar-link-pro">
+          <span>Pro</span>
+        </div>
       </div>
     </div>
   );

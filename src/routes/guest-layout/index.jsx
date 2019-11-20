@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router";
 import Navbar from "../../components/navbar";
-import Trend from "../../components/trend"
 
 class GuestLayout extends Component {
   render() {
@@ -10,8 +9,7 @@ class GuestLayout extends Component {
     return (
       <>
         <Navbar/>
-        <Trend/>
-        <div className="content">
+          <div className="content">
 
             <Route
               {...rest}
@@ -19,7 +17,6 @@ class GuestLayout extends Component {
                 return <ChildComponent {...matchProps} />;
               }}
             />
-
        </div>
       </>
     );

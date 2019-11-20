@@ -1,11 +1,15 @@
 @import "../../../scss/_variables.scss";
 
 .navbar-link-container{
-    display: flex;
-    justify-content: flex-end;
-    background: $blue;
+    background: $dark-blue;
     height: 50px;
-    align-items: center;
+
+    .navbar-link-wrapper{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+    }
 
     .navbar-link-pro{
         height: 100%;
@@ -15,6 +19,10 @@
         align-items: center;
         color: #fffcf5;
         background: #8c2b5e;
+    }
+
+    .home-icon{
+        color: #fff;
     }
 }
 

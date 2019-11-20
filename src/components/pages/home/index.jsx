@@ -1,12 +1,12 @@
 import React,{ useState, useEffect } from "react";
-
+import FreshNews from "./freshnews"
 
 const Home = ()=>  {
 
     return(
 
-      <div className="userInfoContainer">
-        Home
+      <div className="home-content">
+        <FreshNews/>
       </div>
     )
 }

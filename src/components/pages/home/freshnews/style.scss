@@ -1,0 +1,19 @@
+.gaming-section{
+    height: 460px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8;
+
+    img{
+        width:  100%;
+    }
+    span{
+        margin: 5px 22px;
+    }
+
+    .gaming-section-description{
+        font-size: 26px;
+        font-weight: bolder;
+    }
+}
