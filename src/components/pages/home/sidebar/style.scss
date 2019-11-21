@@ -1,0 +1,37 @@
+@import "../../../../scss/_variables.scss";
+
+
+.sidebar {
+    height: 600px;
+    width: 300px;
+    margin-top: 77px;
+
+    .latest-news {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #3d3d3d42;
+
+        .news-icon{
+            color: $red;
+            font-size: 38px;
+        }
+        h2 {
+            margin: 15px;
+
+            a{
+                color: black;
+
+            }
+        }
+    }
+
+    .sidebar-news-link {
+        font-size: 19px;
+        font-weight: 700;
+        padding: 30px 0;
+        border-top: 1px solid #3d3d3d42;
+        
+    }
+
+}
