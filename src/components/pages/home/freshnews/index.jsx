@@ -43,18 +43,14 @@ const FreshNews = ()=>{
                     </div>
 
                     <div className="mini-cart-section">
-                        <div className="full-mini-cart">
-                            <img src={DisneyPlus} alt=""/>
-                            <span>We've got some tips and tricks for Disney+</span>
-                        </div>
-                        <div className="full-mini-cart">
-                            <img src={PhotoshopIPad} alt=""/>
-                            <span>Not my Photoshop: our Photoshop for iPad review</span>
-                        </div>
-                        <div className="full-mini-cart">
-                            <img src={Ps5} alt=""/>
-                            <span>PS5 price won't be as bad as we thought, if this leak is to be believed</span>
-                        </div>
+
+                        <NewsCard size="300x300" image={DisneyPlus} hasBg={true}
+                        title="We've got some tips and tricks for Disney+"/>
+                        <NewsCard size="300x300" image={PhotoshopIPad} hesBg={true}
+                        title="Not my Photoshop: our Photoshop for iPad review"/>
+                        <NewsCard size="300x300" image={Ps5} hasBg={true}
+                        title="PS5 price won't be as bad as we thought, if this leak is to be believed"/>
+
                     </div>
 
                     <div className="middle-cart-section">

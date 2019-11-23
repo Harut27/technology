@@ -32,8 +32,17 @@
 
     // 300x300
     &.size-300x300 {
-        width: 300px;
+        display: flex;
+        flex-direction: column;
         height: 300px;
+        width: 300px;
+
+
+
+        img{
+            height: 65%;
+            width: 100%;
+        }
     }
 
     // 340x350
