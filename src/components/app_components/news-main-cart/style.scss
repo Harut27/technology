@@ -1,0 +1,41 @@
+@import "../../../scss/_variables.scss";
+
+
+.news-main-cart {
+    width: 750px;
+    height: 270px;
+    display: flex;
+    border-bottom: 2px solid rgb(221, 219, 219);
+
+
+        img{
+            height: 230px;
+            width: 320px;
+            margin-top: 20px;
+        }
+    
+
+    .news-main-cart-description{
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+
+        span{
+            font-weight: bolder;
+            font-size: 23px;
+         }
+
+        p{
+            margin-top: 20px;
+            font-size: 17px;
+            
+        }
+    }
+
+    &.with-bg {
+        background: #f7f7f7;
+    }
+
+   
+
+}
