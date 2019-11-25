@@ -43,10 +43,15 @@ const FreshNews = ()=>{
                     </div>
 
                     <div className="mini-cart-section">
+
+                    <NewsCard size="300x300" image={DisneyPlus} hasBg={true}
+                            title="We've got some tips and tricks for Disney+"
+                        />
+{/* 
                         <div className="full-mini-cart">
                             <img src={DisneyPlus} alt=""/>
                             <span>We've got some tips and tricks for Disney+</span>
-                        </div>
+                        </div> */}
                         <div className="full-mini-cart">
                             <img src={PhotoshopIPad} alt=""/>
                             <span>Not my Photoshop: our Photoshop for iPad review</span>
