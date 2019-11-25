@@ -1,6 +1,5 @@
 import React from "react";
-// import SocialMediaIcons from 'react-social-media-icons';
-
+import { Link } from "react-router-dom";
 import "./style.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +10,7 @@ const Burgerbar = ()=>{
         <div className="burgerbar ">
             <div className="centered burgerbar-wrapper">
                 <div className="burgerbar-logo">
-                    <span className="burgerbar-logo-text">GS tech</span>
+                    <Link to="/" className="burgerbar-logo-text">GS tech</Link>
                     <span className="dot">|</span>
                     <span className="strapline">{"The source for Tech Buying Advice".toUpperCase()}</span>
                 </div>

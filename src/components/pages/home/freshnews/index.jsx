@@ -44,6 +44,7 @@ const FreshNews = ()=>{
 
                     <div className="mini-cart-section">
 
+<<<<<<< HEAD
                     <NewsCard size="300x300" image={DisneyPlus} hasBg={true}
                             title="We've got some tips and tricks for Disney+"
                         />
@@ -60,13 +61,21 @@ const FreshNews = ()=>{
                             <img src={Ps5} alt=""/>
                             <span>PS5 price won't be as bad as we thought, if this leak is to be believed</span>
                         </div>
+=======
+                        <NewsCard size="300x300" image={DisneyPlus} hasBg={true}
+                        title="We've got some tips and tricks for Disney+"/>
+                        <NewsCard size="300x300" image={PhotoshopIPad} hasBg={true}
+                        title="Not my Photoshop: our Photoshop for iPad review"/>
+                        <NewsCard size="300x300" image={Ps5} hasBg={true}
+                        title="PS5 price won't be as bad as we thought, if this leak is to be believed"/>
+
+>>>>>>> c7dc6d18f229f315cad9a45b8bae9065f642eb6b
                     </div>
 
                     <div className="middle-cart-section">
-                        <div className="middle-cart">
-                            <img src={GalaxyS10} alt=""/>
-                            <span>Get a Samsung Galaxy S10e for under $400 with this early Black Friday deal</span>
-                        </div>
+                        <NewsCard size="460x330" image={GalaxyS10} hasBg={true} 
+                         title="Get a Samsung Galaxy S10e for under $400 with this early Black Friday deal"/>
+
                         <div className="middle-cart">
                             <img src={Ibm} alt=""/>
                             <span>IBM launches huge open-source security platform</span>

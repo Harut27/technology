@@ -32,12 +32,15 @@
 
     // 300x300
     &.size-300x300 {
-        width: 300px;
+        display: flex;
+        flex-direction: column;
         height: 300px;
+
 
         img{
             height: 65%;
             width: 100%
+
         }
     }
 
@@ -65,6 +68,11 @@
     &.size-460x330 {
         width: 460px;
         height: 330px;
+
+        img {
+            height: 80%;
+            width: 100%;
+        }
     }
 
     // 460x450
