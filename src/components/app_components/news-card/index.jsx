@@ -1,4 +1,4 @@
-import  React from "react";
+import React from "react";
 import "./style.scss";
 
 // size - required (270x220, 300x300, 340x350, 460x330, 460x450, 625x460)
@@ -7,26 +7,36 @@ import "./style.scss";
 // hasBg - required
 // description - optional
 // descriptionLabel - optional
-const NewsCard = (props) => {
-    return (
-        <div className={`
+const NewsCard = ({
+  image,
+  size,
+  hasBg,
+  title,
+  description,
+  descriptionLabel
+}) => {
+  return (
+    <div
+      className={`
             news-card
-            size-${props.size}
-            ${props.hasBg ? "with-bg" : ""}
-        `}>
-            <img src={props.image} alt=""/>
-            <span>{props.title}</span>
-            {props.description && (
-                <p>
-                    {props.descriptionLabel && (
-                        <span>{props.descriptionLabel}</span>
-                    )}
+            size-${size}
+            ${hasBg ? "with-bg" : ""}
+        `}
+    >
+      <img src={image} alt="" />
+      <span>{title}</span>
+      {description && (
+        <p>
+          {descriptionLabel && <span>{descriptionLabel}</span>}
 
-                    {props.description}
-                </p>
-            )}
-        </div>
-    );
+          {description}
+        </p>
+      )}
+    </div>
+  );
 };
 
+NewsCard.defaultProps = {
+  hasBg: false
+};
 export default NewsCard;

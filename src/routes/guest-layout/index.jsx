@@ -8,16 +8,15 @@ class GuestLayout extends Component {
 
     return (
       <>
-        <Navbar/>
-          <div className="content">
-
-            <Route
-              {...rest}
-              render={matchProps => {
-                return <ChildComponent {...matchProps} />;
-              }}
-            />
-       </div>
+        <Navbar />
+        <div className="content">
+          <Route
+            {...rest}
+            render={matchProps => {
+              return <ChildComponent {...matchProps} />;
+            }}
+          />
+        </div>
       </>
     );
   }
