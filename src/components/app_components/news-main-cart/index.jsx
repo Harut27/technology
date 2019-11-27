@@ -1,20 +1,22 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import "./style.scss"
 
-//image - required
-// title - required
-// hasBg - required
-// description - optional
-// descriptionLabel - optional
+
 
 const MainCart = (props)=>{
     return(
         <div className={`news-main-cart ${props.hasBg ? "with-bg" : ""}`} >
             
-            <img src={props.image} alt=""/>
+            <Link to={props.link}>
+                <img src={props.image} alt=""/>
+            </Link>
 
             <div className="news-main-cart-description">
-                <span> {props.title} </span>
+                <Link to={props.link}>
+                    <span> {props.title} </span>
+                </Link>
+
                 {props.description && (
                     <p>
                         {props.descriptionLabel && (

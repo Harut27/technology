@@ -20,6 +20,10 @@
         width: 270px;
         height: 220px;
 
+        &.with-bg {
+            background: #f8f8f8;
+        }
+
         img {
             height: 65%;
             width: 100%;
@@ -37,6 +41,9 @@
         height: 300px;
         width: 300px;
 
+        &.with-bg {
+            background: #f8f8f8;
+        }
 
         img{
             height: 65%;
@@ -52,6 +59,10 @@
     &.size-340x350 {
         width: 340px;
         height: 350px;
+
+        &.with-bg {
+            background: #f8f8f8;
+        }
 
         img {
             width: 100%;
@@ -72,6 +83,10 @@
     &.size-460x330 {
         width: 460px;
         height: 330px;
+
+        &.with-bg {
+            background: #f8f8f8;
+        }
 
         img {
             height: 80%;
@@ -108,6 +123,10 @@
         width: 625px;
         height: 460px;
 
+        &.with-bg {
+            background: #f8f8f8;
+        }
+
         img {
             width: 100%;
         }
@@ -117,7 +136,7 @@
         }
 
         span {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: bolder;
         }
     }

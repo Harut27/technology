@@ -1,0 +1,40 @@
+@import "../../../scss/_variables";
+
+.howto{
+    width: 70%;
+    margin: 0 auto;
+
+    .howto-header{
+
+        h2{
+            font-size: 28px;
+            color: #333;
+
+        }
+
+        span{
+            font-size: 17px;
+        }
+    }
+
+    .title-item{
+        margin: 20px -10px;
+    }
+
+    .howtoList{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+        background: $blue;
+    
+        span{
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+    
+}
+

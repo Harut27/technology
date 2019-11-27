@@ -21,7 +21,7 @@ const NavbarLink = props => {
                 className={`navbar-link navbar-${navbarMenuLink.toLowerCase().replace(/\s/g, '')}`}
                 key={index}
               >
-                <Link to={`/${navbarMenuLink.toLowerCase()}`}>
+                <Link to={`/${navbarMenuLink.toLowerCase().replace(/\s/g, '')}`}>
                   {navbarMenuLink}
                 </Link>
               </div>

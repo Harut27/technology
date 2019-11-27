@@ -3,13 +3,13 @@
 
 .news-main-cart {
     width: 750px;
-    height: 270px;
+    height: 250px;
     display: flex;
     border-bottom: 2px solid rgb(221, 219, 219);
 
 
         img{
-            height: 230px;
+            height: 200px;
             width: 320px;
             margin-top: 20px;
         }
@@ -23,6 +23,7 @@
         span{
             font-weight: bolder;
             font-size: 23px;
+            color: #333;
          }
 
         p{
