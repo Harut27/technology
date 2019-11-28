@@ -1,0 +1,51 @@
+@import "../../scss/_variables";
+
+
+.phones,
+.laptops{
+
+    width: 65%;
+    margin: 0 auto;
+
+    
+    .title-text,
+    .title-section{
+        display: flex;
+        flex-direction: column;
+        h1{
+            color: $dark-grey;
+            font-size: 40px;
+            margin: 20px 0 0;
+        }
+        span{
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        
+    }
+    .title-photos,
+    .laptop-title{
+        width: 650px;
+        display: flex;
+        flex-direction: column;
+
+    }
+         .sub-title-photos,
+        .sub-title-laptop{
+            display: flex;
+        }
+
+    .all-phones,
+    .all-laptops{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        background: $blue;
+        color: #fff;
+    }
+
+}
