@@ -7,6 +7,14 @@ const setNews = (news) => {
     }
 }
 
+const addSingleNews = (news) => {
+    return {
+        type:types.ADD_NEWS,
+        payload:news
+    }
+}
+
 export {
-    setNews
+    setNews,
+    addSingleNews
 }

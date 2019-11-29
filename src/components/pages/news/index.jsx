@@ -27,13 +27,21 @@ import Rupauls from "../../../img/rupauls.jpg";
 import Athlon from "../../../img/athlon.jpg";
 import StarWarGaming from "../../../img/starwargaming.jpg";
 
-import { setNews } from "../../../state/actions";
+import { setNews, addSingleNews } from "../../../state/actions";
 
-const News = ({ news, setNews }) => {
+const News = ({ news, setNews, addSingleNews }) => {
   useEffect(() => {
     const dataFromBackend = fakedata;
     setNews(dataFromBackend);
   }, [news, setNews]);
+
+  const addNewNews = () => {
+    const newDATA = {
+      title: "new news",
+      text: "blabla"
+    };
+    addSingleNews(newDATA);
+  };
 
   return (
     <div className="new-wrapper">
@@ -273,14 +281,19 @@ const News = ({ news, setNews }) => {
 };
 
 const mapDispatchToProps = dispatch => {
+  //uxarki es functian depi componenti props
   return {
     setNews: dataFromBackend => {
       dispatch(setNews(dataFromBackend));
-    }
+    },
+    addSingleNews: news => {
+      dispatch(addSingleNews(news));
+    } //  news uxarkuma actionin vor reduser# ashxati u @ngni propsi mej
   };
 };
 
 const mapStateToProps = state => {
+  // vercnum enq stat@ propsi mijocov
   return {
     news: state.news
   };

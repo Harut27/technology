@@ -83,3 +83,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 <!-- .............. -->
 
  <!-- context API -->
+<!-- ---------------------- -->
+<!-- reade thunk ... asinxron setstate -->
+<!-- reade reselect ... masnatuma stat@ u tenuma vortex changa ka poxuma menak da -->
+<!-- gs generator -->
+<!-- saga  -->
