@@ -9,6 +9,8 @@ import HowTo from "../components/pages/howto"
 import Phones from "../components/pages/phones"
 import Laptops from "../components/pages/laptops"
 import Tvs from "../components/pages/tvs"
+import Photographyes from "../components/pages/photography"
+
 
 
 
@@ -23,6 +25,8 @@ const Routes = () => {
         <GuestLayout exact path="/phones" component={Phones} />
         <GuestLayout exact path="/laptops" component={Laptops} />
         <GuestLayout exact path="/tvs" component={Tvs} />
+        <GuestLayout exact path="/photography" component={Photographyes} />
+
 
 
 
