@@ -22,19 +22,19 @@ const Laptops = ()=>{
                         title={laptopsDataFromBackend[0].title}
                         description={laptopsDataFromBackend[0].subtitle}
                         id={laptopsDataFromBackend[0].id}
-                        link=""
+                        link="/items"
                     />
 
                     <div className="sub-title-laptop">
                         <NewsCard size="300x300" image={laptopsDataFromBackend[1].src} hasBg={true}
                             title={laptopsDataFromBackend[1].title}
                             id={laptopsDataFromBackend[1].id}
-                            link=""
+                            link="/items"
                         />
                         <NewsCard size="300x300" image={laptopsDataFromBackend[2].src} hasBg={true}
                             title={laptopsDataFromBackend[2].title}
                             id={laptopsDataFromBackend[2].id}
-                            link=""
+                            link="/items"
                         />
                     </div>
                    
@@ -55,6 +55,7 @@ const Laptops = ()=>{
                                 title={laptopCart.title}
                                 description={laptopCart.subtitle}
                                 id={laptopCart.id}
+                                link="/items"
                                 /> 
                             </div>
                         )

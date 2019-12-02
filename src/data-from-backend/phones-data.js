@@ -351,7 +351,7 @@ const phonesDataFromBackend = [
         <br/>
         While the US government has given successive temporary Huawei Ban reprieves to rural ISPs - ostensibly to give them time to wean off Huawei - the cutoff from Google’s services forced the Chinese company to develop their own alternatives. Huawei was surprised to discover how dependent Android apps are on Google’s own tools for authentication, notifications, integrating mapping and ad revenue, according to The Information report. 
                 `
-    },
+    }
 ]
 
 export default phonesDataFromBackend;
