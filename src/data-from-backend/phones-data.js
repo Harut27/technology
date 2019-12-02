@@ -1,7 +1,7 @@
 const phonesDataFromBackend = [
 
     {
-        id: 1,
+        id: 21,
         src: 'https://cdn.mos.cms.futurecdn.net/Ttsvvet2Te8XtiyywUwfaR-1024-80.jpg',
         title: "The best Android games 2019",
         subtitle: "The very best Android games played and ranked",
@@ -15,7 +15,7 @@ const phonesDataFromBackend = [
         Check back every other week for a new game, and click through to the following pages to see the best of the best divided into the genres that best represent what people are playing right now.`
     },
     {
-        id: 2,
+        id: 22,
         src: 'https://cdn.mos.cms.futurecdn.net/VRRmS5asCR5x2nLQTPc6xb-320-80.jpg',
         title: "The best phones for music: top choices for audio on your smartphone",
         subtitle: "The kings and queens of digital music streams",
@@ -29,7 +29,7 @@ const phonesDataFromBackend = [
         But if you have a beloved pair of triple driver earphones from years ago that still sound better than anything you could afford today, you’ll want a phone with a headphone jack. These are rare in 2019, and will be rarer in 2020.`
     },
     {
-        id: 3,
+        id: 23,
         src: 'https://cdn.mos.cms.futurecdn.net/GPaKXwCWFvzNsBDtV9bw2K-970-80.jpg',
         title: "The best iPhone chargers 2019: the perfect cables, mats and blocks for your iPhone",
         subtitle: "The best wired and wireless iPhone chargers and cables",
@@ -43,7 +43,7 @@ const phonesDataFromBackend = [
         Below you'll find advice on what to look for in a charger, followed by our picks of the best. And if you're on the lookout for a deal, make sure to keep an eye on our Black Friday and Cyber Monday pages.`
     },
     {
-        id: 4,
+        id: 24,
         src: 'https://cdn.mos.cms.futurecdn.net/gVNJJz4XLnzjKYz7ambi5n-970-80.jpg',
         title: "WhatsApp self-destructing messages are coming soon, with a new name and settings",
         subtitle: "Now you see it... now you don't",
@@ -61,7 +61,7 @@ const phonesDataFromBackend = [
         In earlier beta releases, it was only possible to have messages automatically deleted after fives seconds or an hour. With the new name come new options. As things stand in Delete Messages, you will be able to have messages deleted after an hour, a day, a week, a month or a year.`
     },
     {
-        id: 5,
+        id: 25,
         src: 'https://cdn.mos.cms.futurecdn.net/7mby5enwMBsspSdUVrZJud-970-80.jpg',
         title: "The cheapest AirPod prices, sales, and deals in November 2019",
         subtitle: "The best prices and deals for the Apple AirPods",
@@ -77,7 +77,7 @@ const phonesDataFromBackend = [
         If you've picked up a modern iPhone that's dumped the traditional headphone jack, the Apple AirPods rank amongst the best earphones to pair with your new phone. Although, as they're Bluetooth, you can pair them with plenty of other mobile phones too and even laptops. If you're thinking of getting a new phone too, check out the latest offers below.`
     },
     {
-        id: 6,
+        id: 26,
         src: 'https://cdn.mos.cms.futurecdn.net/zPxBKrqxvkYuSA26vVwqp6-970-80.jpg',
         title: "Samsung Galaxy S11 release date, price, news and leaks",
         subtitle: "A whole Galaxy of potential",
@@ -91,7 +91,7 @@ const phonesDataFromBackend = [
         You'll find that below, but first, here's everything that we've heard about the Samsung Galaxy S11 so far.`
     },
     {
-        id: 7,
+        id: 27,
         src: 'https://cdn.mos.cms.futurecdn.net/jBsg7kJeiERVq3VtHu7CBK-970-80.jpg',
         title: "2020 will see 5G smartphone sales explosion",
         subtitle: "Market will finally return to growth as 5G excitement builds",
@@ -108,7 +108,7 @@ const phonesDataFromBackend = [
          <ul/>`
     },
     {
-        id: 8,
+        id: 28,
         src: 'https://cdn.mos.cms.futurecdn.net/y5kqzgWAfdGNwrHKn7rWeN-970-80.jpg',
         title: "Honor View 30 and Honor View 30 Pro announced with 5G and flagship specs",
         subtitle: "But they may not be widely available",
@@ -126,7 +126,7 @@ const phonesDataFromBackend = [
          <ul/>`
     },
     {
-        id: 9,
+        id: 29,
         src: 'https://cdn.mos.cms.futurecdn.net/cpNyUCDvYXMLMrZLuCz86J-970-80.jpg',
         title: "Google Assistant works",
         subtitle: "But they may not be widely availableGoogle showcases its latest tech",
@@ -146,7 +146,7 @@ const phonesDataFromBackend = [
          According to Ron Amadeo of Ars Technica, the Ambient Mode requires Android 8.1 and is coming to phones from Sony, Nokia, Xiaomi and Transsion, as well as a couple of Lenovo tablets. You can see it in action below.`
     },
     {
-        id: 10,
+        id: 30,
         src: 'https://cdn.mos.cms.futurecdn.net/KTgZmJKrnRGgjcj8GowuJd-970-80.jpg',
         title: "Facebook dark mode has been spotted on Android devices – check yours now",
         subtitle: "Is the launch underway?",
@@ -166,7 +166,7 @@ const phonesDataFromBackend = [
          Of course Facebook is working on bringing dark mode to mobile users – it would be crazy not too – but many people are starting to get impatient and would like to know what it is going to look like, as well as when it might appear.`
     },
     {
-        id: 11,
+        id: 31,
         src: 'https://cdn.mos.cms.futurecdn.net/yrAxhFpdGtfui3pkVmm3oR-1024-80.jpg',
         title: "Google offers million-dollar bug bounty reward",
         subtitle: "Search giant raises bug bounty payouts to help secure its Titan M chip",
@@ -186,7 +186,7 @@ const phonesDataFromBackend = [
          Jessica Lin from the Android Security Team explained how the company is expanding the program to also include developer preview versions of Android, saying:`
     },
     {
-        id: 12,
+        id: 32,
         src: 'https://cdn.mos.cms.futurecdn.net/Gk3DwJAV6wB8ouKsQf2ZgN-970-80.jpg',
         title: "Motorola Razr 2 could have an in-screen scanner and eight side sensors",
         subtitle: "And no chin",
@@ -206,7 +206,7 @@ const phonesDataFromBackend = [
         `
     },
     {
-        id: 13,
+        id: 33,
         src: 'https://cdn.mos.cms.futurecdn.net/FFgBVKFUz4coE9fhy4Y4AW-970-80.jpg',
         title: "The best Nokia phones of 2019: find the right Nokia device for you",
         subtitle: "These are the Nokia phones you should consider",
@@ -226,7 +226,7 @@ const phonesDataFromBackend = [
         `
     },
     {
-        id: 14,
+        id: 34,
         src: 'https://cdn.mos.cms.futurecdn.net/MV8VBgiMG8fiHFQMZtGkA3-970-80.jpg',
         title: "Best LG phones 2019: finding the best LG phone for you",
         subtitle: "LG's best smartphones",
@@ -245,7 +245,7 @@ const phonesDataFromBackend = [
         `
     },
     {
-        id: 15,
+        id: 35,
         src: 'https://cdn.mos.cms.futurecdn.net/s5usm5Dk4zfoMJMbxTW4Q-970-80.jpg',
         title: "Best unlocked phone in the US: 10 smartphones with no contract",
         subtitle: "Unlocked phones give you freedom of choice",
@@ -259,7 +259,7 @@ const phonesDataFromBackend = [
         There’s more good news, as almost all of the best phones are available unlocked. But, that can make it a little harder to choose. Most of these unlocked phones can work on AT&T, Sprint, T-Mobile, Verizon and most MVNOs, though some GSM-only phones have more limited support, making it trickier still to be sure you’re getting the right phone. `
     },
     {
-        id: 16,
+        id: 36,
         src: 'https://cdn.mos.cms.futurecdn.net/yB6n9zDwVP82eHSvDDbSnC-1024-80.jpg',
         title: "The best Motorola phones of 2019: find the best Moto smartphone for you",
         subtitle: "The best Motorola smartphones you can buy today",
@@ -280,7 +280,7 @@ const phonesDataFromBackend = [
         We're approaching the time where Black Friday and Cyber Monday Deals are coming our way - and we're expecting that a few cases deals might start popping up then. So if you think you're OK to wait and not damage your device, you could save some cash - but if the worst does happen then perhaps bookmark our Black Friday iPhone deals page... it could save you a heap of cash. `
     },
     {
-        id: 17,
+        id: 37,
         src: 'https://cdn.mos.cms.futurecdn.net/R4JUHrXr8HnCvFKLsxhe5h-970-80.jpg',
         title: "Best phone in the US for 2019: the top 15 smartphones we've tested",
         subtitle: "Our list of best smartphones ranks the Google Pixel 4",
@@ -302,7 +302,7 @@ const phonesDataFromBackend = [
         Our pick for best phone isn't just crowning the newest iPhone and calling it a day, though our list does have a lot of familiar names: Apple, Samsung, Google and LG, all in the top 15. Newer companies in the US like Huawei and OnePlus make the list, too, though their limited availability is noted.`
     },
     {
-        id: 18,
+        id: 38,
         src: 'https://cdn.mos.cms.futurecdn.net/R4JUHrXr8HnCvFKLsxhe5h-970-80.jpg',
         title: "The best iPhone apps we've used in 2019",
         subtitle: "The best new apps around today",
@@ -323,7 +323,7 @@ const phonesDataFromBackend = [
                 `
     },
     {
-        id: 19,
+        id: 39,
         src: 'https://cdn.mos.cms.futurecdn.net/cnDVq29admScqLgxYvTqx5-970-80.jpg',
         title: "Chrome for Android now has reverse image search powered by Google Lens – here's how to enable it",
         subtitle: "Perform advanced searches using images, not words",
@@ -338,7 +338,7 @@ const phonesDataFromBackend = [
                 `
     },
     {
-        id: 20,
+        id: 40,
         src: 'https://cdn.mos.cms.futurecdn.net/uaQzbKWvX7qfqCUXXhvHbJ-970-80.jpg',
         title: "Huawei P40 slated for a global launch despite Google services lockout",
         subtitle: "The P40 could arrive without the Play Store and first-party apps like Maps and YouTube",
