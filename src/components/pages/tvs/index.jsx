@@ -24,19 +24,19 @@ const Tvs = ()=>{
                         title={tvsDataFromBackend[0].title}
                         description={tvsDataFromBackend[0].subtitle}
                         id={tvsDataFromBackend[0].id}
-                        link="/items"
+                        link={`/posts/${tvsDataFromBackend[0].id}/info`}
                     />
 
                     <div className="sub-title-photos">
                         <NewsCard size="300x300" image={tvsDataFromBackend[1].src} hasBg={true}
                             title={tvsDataFromBackend[1].title}
                             id={tvsDataFromBackend[1].id}
-                            link="/items"
+                            link={`/posts/${tvsDataFromBackend[1].id}/info`}
                         />
                         <NewsCard size="300x300" image={tvsDataFromBackend[2].src} hasBg={true}
                             title={tvsDataFromBackend[2].title}
                             id={tvsDataFromBackend[2].id}
-                            link="/items"
+                            link={`/posts/${tvsDataFromBackend[2].id}/info`}
                         />
                     </div>
                    
@@ -52,12 +52,12 @@ const Tvs = ()=>{
                 {
                     tvsDataFromBackend.map((tvcart,index)=>{
                         return(
-                            <div className="phones-wrapper">
-                                <MainCart image={tvcart.src} hasBg={false} key={index}
+                            <div className="phones-wrapper" key={index}>
+                                <MainCart image={tvcart.src} hasBg={false}
                                 title={tvcart.title}
                                 description={tvcart.subtitle}
                                 id={tvcart.id}
-                                link="/items"
+                                link={`/posts/${tvcart.id}/info`}
                                 /> 
                             </div>
                         )

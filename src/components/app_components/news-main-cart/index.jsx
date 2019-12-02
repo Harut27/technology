@@ -4,26 +4,33 @@ import "./style.scss"
 
 
 
-const MainCart = (props)=>{
+const MainCart = ({
+    image,
+    hasBg,
+    title,
+    description,
+    descriptionLabel,
+    link
+  })=>{
     return(
-        <div className={`news-main-cart ${props.hasBg ? "with-bg" : ""}`} >
+        <div className={`news-main-cart ${hasBg ? "with-bg" : ""}`} >
             
-            <Link to={props.link}>
-                <img src={props.image} alt=""/>
+            <Link to={link}>
+                <img src={image} alt=""/>
             </Link>
 
             <div className="news-main-cart-description">
-                <Link to={props.link}>
-                    <span> {props.title} </span>
+                <Link to={link}>
+                    <span> {title} </span>
                 </Link>
 
-                {props.description && (
+                {description && (
                     <p>
-                        {props.descriptionLabel && (
-                            <span>{props.descriptionLabel}</span>
+                        {descriptionLabel && (
+                            <span>{descriptionLabel}</span>
                         )}
 
-                        {props.description}
+                        {description}
                     </p>
                 )}
             </div>

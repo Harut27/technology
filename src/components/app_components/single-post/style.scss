@@ -1,0 +1,39 @@
+
+.post-page{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.post-wrapper{
+    width: 70%;
+
+    .title-wrapper{
+        display: flex;
+        flex-direction: column;
+
+        h2{
+            font-size: 26px;
+            margin-top: 30px;
+        }
+
+        .category{
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        .subtittle{
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .post-content{
+        margin: 30px 0;
+    }
+
+
+}

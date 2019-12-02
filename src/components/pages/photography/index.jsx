@@ -22,19 +22,19 @@ const Photographyes = ()=>{
                         title={photographyesData[7].title}
                         description={photographyesData[7].subtitle}
                         id={photographyesData[7].id}
-                        link="/items"
+                        link={`/posts/${photographyesData[7].id}/info`}
                     />
 
                     <div className="sub-title-laptop">
                         <NewsCard size="300x300" image={photographyesData[8].src} hasBg={true}
                             title={photographyesData[8].title}
                             id={photographyesData[8].id}
-                            link="/items"
+                            link={`/posts/${photographyesData[8].id}/info`}
                         />
                         <NewsCard size="300x300" image={photographyesData[13].src} hasBg={true}
                             title={photographyesData[13].title}
                             id={photographyesData[13].id}
-                            link="/items"
+                            link={`/posts/${photographyesData[13].id}/info`}
                         />
                     </div>
                    
@@ -50,12 +50,12 @@ const Photographyes = ()=>{
                 {
                     photographyesData.map((Photography,index)=>{
                         return(
-                            <div className="laptops-wrapper">
-                                <MainCart image={Photography.src} hasBg={false} key={index}
+                            <div className="laptops-wrapper"  key={index}>
+                                <MainCart image={Photography.src} hasBg={false}
                                 title={Photography.title}
                                 description={Photography.subtitle}
                                 id={Photography.id}
-                                link="/items"
+                                link={`/posts/${Photography.id}/info`}
                                 /> 
                             </div>
                         )

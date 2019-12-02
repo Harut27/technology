@@ -1,5 +1,5 @@
 import React from "react";
-import laptopsDataFromBackend from "../../../data-from-backend/laptops-data";
+import laptopsData from "../../../data-from-backend/laptops-data";
 import "../style.scss"
 import MainCart from "../../app_components/news-main-cart";
 import NewsCard from "../../app_components/news-card";
@@ -18,23 +18,23 @@ const Laptops = ()=>{
                 </div>
 
                 <div className="title-laptops">
-                    <NewsCard size="625x460" image={laptopsDataFromBackend[0].src} hasBg={true}
-                        title={laptopsDataFromBackend[0].title}
-                        description={laptopsDataFromBackend[0].subtitle}
-                        id={laptopsDataFromBackend[0].id}
-                        link="/items"
+                    <NewsCard size="625x460" image={laptopsData[0].src} hasBg={true}
+                        title={laptopsData[0].title}
+                        description={laptopsData[0].subtitle}
+                        id={laptopsData[0].id}
+                        link={`/posts/${laptopsData[0].id}/info`}
                     />
 
                     <div className="sub-title-laptop">
-                        <NewsCard size="300x300" image={laptopsDataFromBackend[1].src} hasBg={true}
-                            title={laptopsDataFromBackend[1].title}
-                            id={laptopsDataFromBackend[1].id}
-                            link="/items"
+                        <NewsCard size="300x300" image={laptopsData[1].src} hasBg={true}
+                            title={laptopsData[1].title}
+                            id={laptopsData[1].id}
+                            link={`/posts/${laptopsData[1].id}/info`}
                         />
-                        <NewsCard size="300x300" image={laptopsDataFromBackend[2].src} hasBg={true}
-                            title={laptopsDataFromBackend[2].title}
-                            id={laptopsDataFromBackend[2].id}
-                            link="/items"
+                        <NewsCard size="300x300" image={laptopsData[2].src} hasBg={true}
+                            title={laptopsData[2].title}
+                            id={laptopsData[2].id}
+                            link={`/posts/${laptopsData[2].id}/info`}
                         />
                     </div>
                    
@@ -48,14 +48,14 @@ const Laptops = ()=>{
             </div>
             <div className="laptops-content">
                 {
-                    laptopsDataFromBackend.map((laptopCart,index)=>{
+                    laptopsData.map((laptopCart,index)=>{
                         return(
-                            <div className="laptops-wrapper">
-                                <MainCart image={laptopCart.src} hasBg={false} key={index}
+                            <div className="laptops-wrapper" key={index}>
+                                <MainCart image={laptopCart.src} hasBg={false} 
                                 title={laptopCart.title}
                                 description={laptopCart.subtitle}
                                 id={laptopCart.id}
-                                link="/items"
+                                link={`/posts/${laptopCart.id}/info`}
                                 /> 
                             </div>
                         )
