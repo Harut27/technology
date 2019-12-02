@@ -22,19 +22,19 @@ const Photographyes = ()=>{
                         title={photographyesData[7].title}
                         description={photographyesData[7].subtitle}
                         id={photographyesData[7].id}
-                        link=""
+                        link="/items"
                     />
 
                     <div className="sub-title-laptop">
                         <NewsCard size="300x300" image={photographyesData[8].src} hasBg={true}
                             title={photographyesData[8].title}
                             id={photographyesData[8].id}
-                            link=""
+                            link="/items"
                         />
                         <NewsCard size="300x300" image={photographyesData[13].src} hasBg={true}
                             title={photographyesData[13].title}
                             id={photographyesData[13].id}
-                            link=""
+                            link="/items"
                         />
                     </div>
                    
@@ -55,6 +55,7 @@ const Photographyes = ()=>{
                                 title={Photography.title}
                                 description={Photography.subtitle}
                                 id={Photography.id}
+                                link="/items"
                                 /> 
                             </div>
                         )

@@ -24,19 +24,19 @@ const Tvs = ()=>{
                         title={tvsDataFromBackend[0].title}
                         description={tvsDataFromBackend[0].subtitle}
                         id={tvsDataFromBackend[0].id}
-                        link=""
+                        link="/items"
                     />
 
                     <div className="sub-title-photos">
                         <NewsCard size="300x300" image={tvsDataFromBackend[1].src} hasBg={true}
                             title={tvsDataFromBackend[1].title}
                             id={tvsDataFromBackend[1].id}
-                            link=""
+                            link="/items"
                         />
                         <NewsCard size="300x300" image={tvsDataFromBackend[2].src} hasBg={true}
                             title={tvsDataFromBackend[2].title}
                             id={tvsDataFromBackend[2].id}
-                            link=""
+                            link="/items"
                         />
                     </div>
                    
@@ -57,6 +57,7 @@ const Tvs = ()=>{
                                 title={tvcart.title}
                                 description={tvcart.subtitle}
                                 id={tvcart.id}
+                                link="/items"
                                 /> 
                             </div>
                         )
