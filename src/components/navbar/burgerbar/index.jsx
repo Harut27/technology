@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook,faTwitter,faYoutube,fa } from '@fortawesome/free-brands-svg-icons';
+
 
 
 const Burgerbar = ()=>{
@@ -21,10 +22,19 @@ const Burgerbar = ()=>{
                     <div className="burgerbar-social">
                         {/* <SocialMediaIcons/> */}
                     </div>
-                    {/* <div className="burgerbar-search">
-                        <span className="burgerbar-search-text">Search</span>
-                        <FontAwesomeIcon icon={faSearch}/>
-                    </div> */}
+                    <div className="burgerbar-icons">
+                        <div className="facebook-icon">
+                        <FontAwesomeIcon icon={faFacebook} />
+                        </div>
+                        <div className="twitter-icon">
+                        <FontAwesomeIcon icon={faTwitter} />
+                        </div>
+                        <div className="youtube-icon">
+                        <FontAwesomeIcon icon={faYoutube} />
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
         </div>

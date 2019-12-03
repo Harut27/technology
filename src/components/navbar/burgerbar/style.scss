@@ -39,12 +39,36 @@
         justify-content: center;
         align-items: center;
 
-        .burgerbar-search{
-            color: #fff;
+        .burgerbar-icons{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 120px;
+
+
+            .facebook-icon,
+            .youtube-icon,
+            .twitter-icon{
+                font-size: 22px;
+                cursor: pointer;
+            }
+
+            .facebook-icon:hover,
+            .youtube-icon:hover,
+            .twitter-icon:hover {
+                font-size: 30px;
+            }
             
-            .burgerbar-search-text{
-                margin: 10px;
-                font-size: 14px;
+            .facebook-icon{
+                color: #103369;
+            }
+
+            .youtube-icon{
+                color: #c91413;
+            }
+
+            .twitter-icon{
+                color: #cae4fb;
             }
         }
     }
