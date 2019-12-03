@@ -14,7 +14,7 @@
     border-bottom: 1px solid #88888842;
 
     a {
-        color: #888888;
+        color: #333;
         margin: 25px;
     }
 }
@@ -22,6 +22,8 @@
 .card-wrapper{
     display: flex;
     flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .small-cart-wrapper{
@@ -40,6 +42,6 @@
     border-bottom: 1px solid #88888842;
 
     a{
-        color: #2f2f2e;
+        color: #333;
     }
 }

@@ -2,17 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { faHome,faSearch } from '@fortawesome/free-solid-svg-icons'
 
 
 const NavbarLink = props => {
-  const navbarManu = ["How To", "Phones", "TVs", "Laptops", "Photography"];
+  const navbarManu = ["How To", "Phones", "TVs", "Laptops", "Photography", "Contact Us"];
 
   return (
     <div className="navbar-link-container">
       <div className="centered navbar-link-wrapper">
         <div className="home-icon">
+        <Link to="/">
           <FontAwesomeIcon icon={faHome}/>
+          </Link>
         </div>
         <div className="links">
           {navbarManu.map((navbarMenuLink, index) => {
@@ -28,8 +30,9 @@ const NavbarLink = props => {
             );
           })}
         </div>
-        <div className="navbar-link-pro">
-          <span>Pro</span>
+        <div className="navbar-search">
+            <span className="burgerbar-search-text">Search</span>
+            <FontAwesomeIcon icon={faSearch}/>
         </div>
       </div>
     </div>

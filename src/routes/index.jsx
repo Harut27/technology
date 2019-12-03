@@ -12,6 +12,8 @@ import Tvs from "../components/pages/tvs";
 import Photographyes from "../components/pages/photography";
 import Howto from "../components/pages/howto";
 import PostPage from "../components/pages/post-page"
+import Contact from "../components/pages/contact"
+
 
 
 
@@ -22,6 +24,8 @@ const Routes = () => {
       <Switch>
         <GuestLayout exact path="/" component={Home} />;
         <GuestLayout exact path="/news" component={News} />;
+        <GuestLayout exact path="/contactus" component={Contact} />;
+
         <GuestLayout exact path="/howto" component={HowTo} />;
         <GuestLayout exact path="/phones" component={Phones} />;
         <GuestLayout exact path="/laptops" component={Laptops} />;
@@ -30,6 +34,7 @@ const Routes = () => {
         <GuestLayout exact path="/howto" component={Howto} />;
         <GuestLayout exact path="/posts" component={PostPage} />;
         <GuestLayout exact path="/posts/:id/info" component={PostPage} />;
+
 
 
         

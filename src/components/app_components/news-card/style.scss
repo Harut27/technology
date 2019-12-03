@@ -14,6 +14,11 @@
         padding-right: 10px !important;
     }
 
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
     // 270x220
     &.size-270x220 {
         margin-left: 33px;
@@ -24,9 +29,16 @@
             background: #f8f8f8;
         }
 
-        img {
-            height: 65%;
+        
+
+        a:first-child {
+            min-height: 65%;
+            max-height: 65%;
             width: 100%;
+        }
+        a:nth-child(2){
+            margin: 7px;
+            color: #333;
         }
 
         span {
@@ -38,20 +50,25 @@
     &.size-300x300 {
         display: flex;
         flex-direction: column;
-        height: 300px;
+        height: 270px;
         width: 300px;
 
         &.with-bg {
             background: #f8f8f8;
         }
 
-        img{
-            height: 65%;
+        a:nth-child(2){
+            margin: 15px 10px ;
+            color: #333;
+        }
+
+        a:first-child {
+            min-height: 65%;
+            max-height: 65%;
             width: 100%
         }
         span {
             font-weight: bolder;
-            margin: 17px;
         }
 
     }
@@ -65,9 +82,15 @@
             background: #f8f8f8;
         }
 
-        img {
+        a:nth-child(2){
+            padding-top: 20px;
+            color: #333;
+        }
+
+        a:first-child {
             width: 100%;
-            height: 50%;
+            min-height: 50%;
+            max-height: 50%;
         }
 
         span {
@@ -78,6 +101,7 @@
 
         p, p * {
             font-size: 15px;
+            margin: 10px 0;
         }
     }
 
@@ -89,8 +113,14 @@
             background: #f8f8f8;
         }
 
-        img {
-            height: 80%;
+        a:nth-child(2){
+            margin: 15px;
+            color: #333;
+        }
+
+        a:first-child {
+            min-height: 80%;
+            max-height: 80%;
             width: 100%;
         }
         span {
@@ -101,11 +131,16 @@
     // 460x450
     &.size-460x450 {
         width: 460px;
-        height: 450px;
+        height: 380px;
 
-        img {
+        a:first-child {
             width: 100%;
-            height: 60%;
+            min-height: 70%;
+            max-height: 70%;
+        }
+        a:nth-child(2){
+            padding-top: 20px;
+            color: #333;
         }
 
         span {
@@ -128,13 +163,18 @@
             background: #f8f8f8;
         }
 
-        img {
+        a:first-child {
             width: 100%;
-            height: 72%;
+            min-height: 75%;
+            max-height: 75%;
+        }
+        a:nth-child(2){
+            margin: 15px;
+            color: #333;
         }
 
-        span, p {
-            margin: 5px 22px;
+        p {
+            margin: 0 15px;
         }
 
         span {

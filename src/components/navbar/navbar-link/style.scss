@@ -11,14 +11,18 @@
         height: 100%;
     }
 
-    .navbar-link-pro{
+    .navbar-search{
         height: 100%;
-        width: 90px;
+        width: 120px;
         display: flex;
         justify-content: center;
         align-items: center;
         color: #fffcf5;
         background: #8c2b5e;
+
+        .burgerbar-search-text{
+            margin-right: 10px;
+        }
     }
 
     .home-icon{
@@ -30,8 +34,13 @@
     display: flex;
 }
 
+
 .navbar-link a,
 .home-icon {
     color: #fffcf5;
     margin: 15px;
+
+    a{
+        color: #fffcf5;
+    }
 }

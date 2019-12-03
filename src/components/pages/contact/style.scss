@@ -1,0 +1,19 @@
+.contact-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 210px);
+
+    .contac-data{
+        display: flex;
+        flex-direction: column;
+    }
+
+    span{
+        font-size: 20px;
+        margin: 5px;
+    }
+    img{
+        width: 650px;
+    }
+}

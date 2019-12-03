@@ -1,18 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
-
-import imgContact from "../../../img/Contact-Us-PNG.png";
+import React from "react";
+import "./style.scss";
+import imgContact from "./contact-us.png";
 
 const Contact = props => {
-  useEffect(() => {
-    return () => {
-      alert("hey");
-    };
-  });
 
   return (
     <div className="contact-page">
-      <span>Mobile Number: +374-98-91-67-78</span>
-      <span>Email Adress: Agayanharut1@gmail.com</span>
+      <div className="contac-data">
+        <span><strong>Mobile Number:</strong>  +374-00-00-00</span>
+        <span><strong>Email Adress:</strong>  gstech@gmail.com</span>
+      </div>
       <img src={imgContact} />
     </div>
   );

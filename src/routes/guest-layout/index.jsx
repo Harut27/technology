@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router";
 import Navbar from "../../components/navbar";
+import Footer from "../../components/footer"
 
 class GuestLayout extends Component {
   render() {
@@ -17,6 +18,7 @@ class GuestLayout extends Component {
             }}
           />
         </div>
+        <Footer/>
       </>
     );
   }
