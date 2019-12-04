@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./style.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome,faSearch } from '@fortawesome/free-solid-svg-icons'
+import FilterResults from "../../app_components/search"
 
 
 const NavbarLink = props => {
@@ -31,8 +32,10 @@ const NavbarLink = props => {
           })}
         </div>
         <div className="navbar-search">
-            <span className="burgerbar-search-text">Search</span>
-            <FontAwesomeIcon icon={faSearch}/>
+
+          <FilterResults/>+
+            {/* <span className="burgerbar-search-text">Search</span> */}
+            {/* <FontAwesomeIcon icon={faSearch}/> */}
         </div>
       </div>
     </div>
