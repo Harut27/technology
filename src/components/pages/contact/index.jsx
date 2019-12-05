@@ -10,7 +10,7 @@ const Contact = props => {
         <span><strong>Mobile Number:</strong>  +374-00-00-00</span>
         <span><strong>Email Adress:</strong>  gstech@gmail.com</span>
       </div>
-      <img src={imgContact} />
+      <img src={imgContact} alt="" />
     </div>
   );
 };

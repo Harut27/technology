@@ -14,12 +14,12 @@ const SinglePost = ({postid,})=>{
     return(
 
         <div className="post-page">
-      {allData.map((post,index) => {
+      { allData.map((post,index) => {
 
         if(post.id == postid){
 
           return (
-            <div className="post-wrapper">
+            <div className="post-wrapper" key={index}>
 
               <div className="title-wrapper">
 

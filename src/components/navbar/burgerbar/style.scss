@@ -51,12 +51,19 @@
             .twitter-icon{
                 font-size: 22px;
                 cursor: pointer;
+                transition: width 1s;
+
             }
 
             .facebook-icon:hover,
             .youtube-icon:hover,
             .twitter-icon:hover {
                 font-size: 30px;
+            }
+            .facebook-icon:hover svg,
+            .youtube-icon:hover svg,
+            .twitter-icon:hover svg {
+                transition: width 1s;
             }
             
             .facebook-icon{

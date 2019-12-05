@@ -1,0 +1,37 @@
+@import "../../../scss/variables";
+
+.serch-section{
+    width: 100%;
+
+
+    .founded {
+        position: absolute;
+        top: 114px;
+        width: 350px;
+        min-height: 30px;
+        max-height: 324px;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        border: 1px solid $blue;
+        color: #333;
+        background: #fff;
+
+        a{
+            margin: 3px;
+            height: 23px;
+            width: 99%;
+            font-size: 15px;
+            color: #333;
+            background: #f1f7fb;
+        }
+    }
+
+    .serch-box{
+        position: relative;
+        height: 27px;
+        width: 100%;
+        border: 1px solid $blue;
+    }
+
+}
