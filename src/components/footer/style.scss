@@ -3,4 +3,44 @@
 footer {
     height: 100px;
     background: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-page{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .footer-text{
+            margin-right: 20px;
+            font-size: 24px;
+            color: #333
+        }
+
+        a{
+            cursor: pointer;
+            color: #e624a4;
+            font-size: 28px;
+        }
+    }
+
+    .footer-contact{
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        border-left: 1px solid #333;
+        padding-left: 50px;;
+
+        div {
+            font-size: 18px;
+            margin: 3px;
+            color: #333;
+
+            svg{
+                margin-right: 10px;
+            }
+        }
+    }
 }
