@@ -1,11 +1,40 @@
 import React from "react";
-import photographyesData from "../../../data-from-backend/photography-data";
+// import photographyesData from "../../../data-from-backend/photography-data";
 import "../style.scss"
 import MainCart from "../../app_components/news-main-cart";
 import NewsCard from "../../app_components/news-card";
+import Loading from "../../app_components/loader";
 
 
-const Photographyes = ()=>{
+class Photographyes extends React.Component {
+
+
+    state = {
+        loading:true,
+        photographyesData: []
+    }
+
+
+    async componentDidMount(){
+        const response = await fetch('http://localhost:3000/photography')
+        let data = await response.json()
+
+        this.setState({
+            loading: false,
+            photographyesData: data
+        })
+    }
+
+
+    render(){
+
+        const {loading,photographyesData} = this.state;
+
+        if(loading){
+            return <Loading/>
+        }
+    
+
     return(
         <div className="laptops">
             
@@ -66,7 +95,7 @@ const Photographyes = ()=>{
             </div>
 
         </div>
-    )
+    )}
 }
 
 export default Photographyes;

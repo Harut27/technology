@@ -1,12 +1,41 @@
 import React from "react";
-import phonesData from "../../../data-from-backend/phones-data";
+// import phonesData from "../../../data-from-backend/phones-data";
 import "../style.scss"
 import MainCart from "../../app_components/news-main-cart";
 import NewsCard from "../../app_components/news-card";
+import Loading from "../../app_components/loader";
 
 
-const Phones = ()=>{
 
+
+
+class Phones extends React.Component {
+
+    state = {
+        loading: true,
+        phonesData: []
+    }
+
+
+    async componentDidMount(){
+        const respons = await fetch('http://localhost:3000/phones');
+        let data = await respons.json()
+
+        this.setState({
+            loading:false,
+            phonesData: data
+        })
+
+    }
+
+
+    render(){
+
+        let {loading,phonesData} = this.state;
+
+        if(loading){
+            return <Loading/>
+        }
 
     return(
         <div className="phones">
@@ -67,7 +96,7 @@ const Phones = ()=>{
             </div>
 
         </div>
-    )
+    )}
 }
 
 export default Phones;

@@ -3,16 +3,68 @@ import NewsCard from "../../../app_components/news-card";
 import "./style.scss";
 
 import Sidebar from "../sidebar";
-
-import laptopsData from "../../../../data-from-backend/laptops-data";
-import HowtoData from "../../../../data-from-backend/howto-data";
-import phonesData from "../../../../data-from-backend/phones-data";
-import photographyesData from "../../../../data-from-backend/photography-data";
-import tvsData from "../../../../data-from-backend/tvs-data";
+import Loading from "../../../app_components/loader";
 
 
 
-const FreshNews = ()=>{
+
+class FreshNews extends React.Component{
+
+
+    state = {
+        loading: true,
+        laptopsData: [],
+        phonesData: [],
+        tvsData: [],
+        photographyesData: [],
+        HowtoData: []
+    }
+
+
+    async componentDidMount(){
+
+        let laptopResponse = await fetch('http://localhost:3000/laptops');
+        let laptopData = await laptopResponse.json();
+
+        let phoneResponse = await fetch('http://localhost:3000/phones');
+        let PhoneData = await phoneResponse.json();
+
+        let tvResponse = await fetch('http://localhost:3000/tvs');
+        let tvData = await tvResponse.json();
+
+        let phhotographyResponse = await fetch('http://localhost:3000/photography');
+        let photographyData = await phhotographyResponse.json();
+
+        let howtoResponse = await fetch('http://localhost:3000/howto');
+        let howData = await howtoResponse.json();
+
+
+        this.setState({
+            loading: false,
+            laptopsData: laptopData,
+            phonesData: PhoneData,
+            tvsData: tvData,
+            photographyesData: photographyData,
+            HowtoData: howData
+        })
+    }
+
+
+    render(){
+
+        let {
+            loading,
+            laptopsData,
+            phonesData,
+            tvsData,
+            photographyesData,
+            HowtoData
+        } = this.state;
+
+        if(loading){
+            return <Loading/>
+        }
+
     return(
         
         <div className="freshNews centered">
@@ -61,6 +113,8 @@ const FreshNews = ()=>{
 
                     </div>
 
+                    {console.log(tvsData)}
+
                     <div className="middle-cart-section">
                         <NewsCard size="460x330" image={photographyesData[12].src} hasBg={true} 
                             title={photographyesData[12].title}
@@ -79,7 +133,7 @@ const FreshNews = ()=>{
             <Sidebar/>
         </div>
 
-    )
+    )}
 }
 
 export default FreshNews;

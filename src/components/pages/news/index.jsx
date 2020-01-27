@@ -1,55 +1,89 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+import React from "react";
 import "./style.scss";
 
 import MainCart from "../../app_components/news-main-cart";
 import NewsCard from "../../app_components/news-card";
-import fakedata from "../../../fakedata/news";
+import Loading from "../../app_components/loader";
 
 
-import laptopsData from "../../../data-from-backend/laptops-data";
-import HowtoData from "../../../data-from-backend/howto-data";
-import phonesData from "../../../data-from-backend/phones-data";
-import photographyesData from "../../../data-from-backend/photography-data";
-import tvsData from "../../../data-from-backend/tvs-data";
+
+class News extends React.Component {
+
+  state = {
+    loading: true,
+    laptopsData: [],
+    phonesData: [],
+    tvsData: [],
+    photographyesData: [],
+    HowtoData: []
+}
 
 
-import { setNews, addSingleNews } from "../../../state/actions";
+async componentDidMount(){
 
-const News = ({ news, setNews, addSingleNews }) => {
-  // useEffect(() => {
-  //   const dataFromBackend = fakedata;
-  //   setNews(dataFromBackend);
-  // }, [news, setNews]);
+    let laptopResponse = await fetch('http://localhost:3000/laptops');
+    let laptopData = await laptopResponse.json();
 
-  // const addNewNews = () => {
-  //   const newDATA = {
-  //     title: "new news",
-  //     text: "blabla"
-  //   };
-  //   addSingleNews(newDATA);
-  // };
+    let phoneResponse = await fetch('http://localhost:3000/phones');
+    let PhoneData = await phoneResponse.json();
 
-  const dataToShow = [];
-  let maxLength = 0;
-  const setMax = (arr) => {
-    if (maxLength < arr.length) { maxLength = arr.length; }
-  };
+    let tvResponse = await fetch('http://localhost:3000/tvs');
+    let tvData = await tvResponse.json();
 
-  setMax(laptopsData);
-  setMax(HowtoData);
-  setMax(phonesData);
-  setMax(photographyesData);
-  setMax(tvsData);
+    let phhotographyResponse = await fetch('http://localhost:3000/photography');
+    let photographyData = await phhotographyResponse.json();
 
-  for (let i = 0; i < maxLength - 1; ++i) {
-    laptopsData.length > i && dataToShow.push(laptopsData[i]);
-    HowtoData.length > i && dataToShow.push(HowtoData[i]);
-    phonesData.length > i && dataToShow.push(phonesData[i]);
-    photographyesData.length > i && dataToShow.push(photographyesData[i]);
-    tvsData.length > i && dataToShow.push(tvsData[i]);
+    let howtoResponse = await fetch('http://localhost:3000/howto');
+    let howData = await howtoResponse.json();
+
+
+    this.setState({
+        loading: false,
+        laptopsData: laptopData,
+        phonesData: PhoneData,
+        tvsData: tvData,
+        photographyesData: photographyData,
+        HowtoData: howData
+    })
+}
+
+  render(){
+
+    let {
+      loading,
+      laptopsData,
+      phonesData,
+      tvsData,
+      photographyesData,
+      HowtoData
+  } = this.state;
+
+  if(loading){
+    return <Loading/>
   }
+
+
+    const dataToShow = [];
+    let maxLength = 0;
+    const setMax = (arr) => {
+      if (maxLength < arr.length) { maxLength = arr.length; }
+    };
+  
+    setMax(laptopsData);
+    setMax(HowtoData);
+    setMax(phonesData);
+    setMax(photographyesData);
+    setMax(tvsData);
+  
+    for (let i = 0; i < maxLength - 1; ++i) {
+      laptopsData.length > i && dataToShow.push(laptopsData[i]);
+      HowtoData.length > i && dataToShow.push(HowtoData[i]);
+      phonesData.length > i && dataToShow.push(phonesData[i]);
+      photographyesData.length > i && dataToShow.push(photographyesData[i]);
+      tvsData.length > i && dataToShow.push(tvsData[i]);
+    }
+  
+
 
   return (
 
@@ -112,41 +146,8 @@ const News = ({ news, setNews, addSingleNews }) => {
       </div>
     </div>
 
-
-    // /* {news.length &&
-    // news.map((post, index) => {
-    //   return (
-    //     <MainCart
-    //       image={post.src}
-    //       hasBg={false}
-    //       title={post.title}
-    //       description={`${post.content.slice(0, 102)}...`}
-    //       id={post.id}
-    //       link={`news/${post.id}`}
-    //     />
-    //   );
-    // })} */
-
-  );
+  )};
 };
 
-const mapDispatchToProps = dispatch => {
-  //uxarki es functian depi componenti props
-  return {
-    setNews: dataFromBackend => {
-      dispatch(setNews(dataFromBackend));
-    },
-    addSingleNews: news => {
-      dispatch(addSingleNews(news));
-    } //  news uxarkuma actionin vor reduser# ashxati u @ngni propsi mej
-  };
-};
 
-const mapStateToProps = state => {
-  // vercnum enq stat@ propsi mijocov
-  return {
-    news: state.news
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(News);
+export default News;

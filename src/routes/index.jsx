@@ -22,10 +22,10 @@ const Routes = () => {
   return (
     <Router>
       <Switch>
+        
         <GuestLayout exact path="/" component={Home} />;
         <GuestLayout exact path="/news" component={News} />;
         <GuestLayout exact path="/contactus" component={Contact} />;
-
         <GuestLayout exact path="/howto" component={HowTo} />;
         <GuestLayout exact path="/phones" component={Phones} />;
         <GuestLayout exact path="/laptops" component={Laptops} />;
@@ -35,9 +35,6 @@ const Routes = () => {
         <GuestLayout exact path="/posts" component={PostPage} />;
         <GuestLayout exact path="/posts/:id/info" component={PostPage} />;
 
-
-
-        
       </Switch>
     </Router>
   );

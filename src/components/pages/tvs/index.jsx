@@ -1,12 +1,39 @@
 import React from "react";
-import tvsDataFromBackend from "../../../data-from-backend/tvs-data";
+// import tvsDataFromBackend from "../../../data-from-backend/tvs-data";
 import "../style.scss"
 import MainCart from "../../app_components/news-main-cart";
 import NewsCard from "../../app_components/news-card";
+import Loading from "../../app_components/loader";
 
 
-const Tvs = ()=>{
+class Tvs extends React.Component {
 
+    state = {
+        loading: true,
+        tvsDataFromBackend: []
+    }
+
+
+    async componentDidMount(){
+        const response = await fetch('http://localhost:3000/tvs');
+        const data = await response.json();
+
+
+        this.setState({
+            loading:false,
+            tvsDataFromBackend: data
+        })
+    }
+
+    render(){
+
+        const {loading,tvsDataFromBackend} = this.state;
+
+        if(loading){
+            return <Loading/>
+        }
+
+    
 
     return(
         <div className="phones">
@@ -68,7 +95,7 @@ const Tvs = ()=>{
             </div>
 
         </div>
-    )
+    )}
 }
 
 export default Tvs;
