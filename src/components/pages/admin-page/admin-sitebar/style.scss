@@ -4,27 +4,43 @@
     display: flex;
     flex-direction: column;
     background: #333;
+    padding-left: 20px;
 
     .accountSection{
         height: 100px;
         width: 100%;
         color: #a9a6a6;
-        margin: 13px;
+        margin-top: 15px;
     }
 
-    .productsFromAdmin{
+    .pagesFromAdmin{
         width: 100%;
         height: 400px;
         display: flex;
         flex-direction: column;
+        box-sizing: border-box;
+        padding-right: 20px;
 
-        .admin-product-link{
+        .pagesFromAdminTitle{
+            // margin: 13px;
+            padding-bottom: 20px;
+            color: #a9a6a694;
+            border-bottom: 1px solid #a9a6a694;
+        }
+
+        .admin-pages-link{
             color: #fff;
             font-size: 18px;
+
+            a{
+                display: flex;
+                justify-content: space-between;
+            }
+
         }
     }
 
-    .admin-product-link{ 
+    .admin-pages-link{ 
         margin: 13px;
 
         a{
