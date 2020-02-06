@@ -2,17 +2,51 @@ import React from "react";
 import "./style.scss";
 
 import NewsCard from "../news-card";
-
+import GetData from "../dataFromBackEnd"
 
 import laptopsData from "../../../data-from-backend/laptops-data";
 import HowtoData from "../../../data-from-backend/howto-data";
 import phonesData from "../../../data-from-backend/phones-data";
 import photographyesData from "../../../data-from-backend/photography-data";
 import tvsData from "../../../data-from-backend/tvs-data";
+import GetRequest from "../dataFromBackEnd";
 
 
 
-const ThisMonthsNews = () => {
+class ThisMonthsNews extends React.Component{
+
+
+    state = {
+        laptopsData: [],
+        HowtoData: [],
+        phonesData: [],
+        photographyesData: [],
+        tvsData: []
+    }
+
+
+    async componentDidMount(){
+
+        const [laptopsData,HowtoData,phonesData,photographyesData,tvsData] = await GetRequest();
+
+        this.setState({
+            laptopsData: laptopsData,
+            HowtoData:HowtoData,
+            phonesData:phonesData,
+            photographyesData: photographyesData,
+            tvsData: tvsData
+        })
+    } 
+
+    render(){
+
+        let {
+                laptopsData,
+                HowtoData,
+                phonesData,
+                photographyesData,
+                tvsData
+        } = this.state;
     
     return(
         <div className="this-Months-News">
@@ -62,7 +96,7 @@ const ThisMonthsNews = () => {
             
 
         </div>
-    )
+    )}
 };
 
 

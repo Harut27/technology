@@ -12,8 +12,8 @@ const NavbarLink = props => {
     <div className="navbar-link-container">
       <div className="centered navbar-link-wrapper">
         <div className="home-icon">
-        <Link to="/">
-          <FontAwesomeIcon icon={faHome}/>
+          <Link to="/">
+            <FontAwesomeIcon icon={faHome}/>
           </Link>
         </div>
         <div className="links">

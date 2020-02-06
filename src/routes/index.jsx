@@ -13,6 +13,7 @@ import Photographyes from "../components/pages/photography";
 import Howto from "../components/pages/howto";
 import PostPage from "../components/pages/post-page"
 import Contact from "../components/pages/contact"
+import AdminPage from "../components/pages/admin-page"
 
 
 
@@ -24,6 +25,7 @@ const Routes = () => {
       <Switch>
         
         <GuestLayout exact path="/" component={Home} />;
+        <GuestLayout exact path="/admin" component={AdminPage} />;
         <GuestLayout exact path="/news" component={News} />;
         <GuestLayout exact path="/contactus" component={Contact} />;
         <GuestLayout exact path="/howto" component={HowTo} />;

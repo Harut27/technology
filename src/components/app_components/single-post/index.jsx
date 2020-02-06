@@ -1,22 +1,60 @@
 import React from "react";
-import laptopsData from "../../../data-from-backend/laptops-data";
-import HowtoData from "../../../data-from-backend/howto-data";
-import phonesData from "../../../data-from-backend/phones-data";
-import photographyesData from "../../../data-from-backend/photography-data";
-import tvsData from "../../../data-from-backend/tvs-data";
 import "./style.scss"
+import Loading from "../../app_components/loader";
+import GetRequest from "../dataFromBackEnd";
 
-const allData = laptopsData.concat(HowtoData,phonesData,photographyesData,tvsData)
+
+class SinglePost extends React.Component{
+
+  state = {
+    loading: true,
+    laptopsData: [],
+    phonesData: [],
+    tvsData: [],
+    photographyesData: [],
+    HowtoData: [],
+}
 
 
-const SinglePost = ({postid,})=>{
+async componentDidMount(){
 
+    const [laptopData,PhoneData,tvData,photographyData,howData] = await GetRequest()
+
+    this.setState({
+        loading: false,
+        laptopsData: laptopData,
+        phonesData: PhoneData,
+        tvsData: tvData,
+        photographyesData: photographyData,
+        HowtoData: howData
+    })
+}
+
+  render(){
+    
+    let {
+      loading,
+      laptopsData,
+      phonesData,
+      tvsData,
+      photographyesData,
+      HowtoData,
+  } = this.state;
+
+  const allData = laptopsData.concat(HowtoData,phonesData,photographyesData,tvsData)
+
+
+  if(loading){
+    return <Loading/>
+  }
+    
     return(
 
         <div className="post-page">
       { allData.map((post,index) => {
 
-        if(post.id == postid){
+
+        if(this.props.postid == post.id){
 
           return (
             <div className="post-wrapper" key={index}>
@@ -49,7 +87,7 @@ const SinglePost = ({postid,})=>{
         })
       } 
     </div>
-    )
+    )}
 }
 
 export default SinglePost;

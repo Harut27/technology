@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook,faTwitter,faYoutube,fa } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook,faTwitter,faYoutube } from '@fortawesome/free-brands-svg-icons';
+import {faUserCircle} from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -32,8 +33,9 @@ const Burgerbar = ()=>{
                         <div className="youtube-icon">
                         <FontAwesomeIcon icon={faYoutube} />
                         </div>
-
-
+                        <div className="user-icon">
+                        <Link to="/admin"><FontAwesomeIcon icon={faUserCircle} /></Link>
+                        </div>
                     </div>
                 </div>
             </div>

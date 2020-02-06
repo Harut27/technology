@@ -4,12 +4,10 @@ import "./style.scss";
 
 import Sidebar from "../sidebar";
 import Loading from "../../../app_components/loader";
-
-
+import GetRequest from "../../../app_components/dataFromBackEnd/index"
 
 
 class FreshNews extends React.Component{
-
 
     state = {
         loading: true,
@@ -20,24 +18,9 @@ class FreshNews extends React.Component{
         HowtoData: []
     }
 
-
     async componentDidMount(){
 
-        let laptopResponse = await fetch('http://localhost:3000/laptops');
-        let laptopData = await laptopResponse.json();
-
-        let phoneResponse = await fetch('http://localhost:3000/phones');
-        let PhoneData = await phoneResponse.json();
-
-        let tvResponse = await fetch('http://localhost:3000/tvs');
-        let tvData = await tvResponse.json();
-
-        let phhotographyResponse = await fetch('http://localhost:3000/photography');
-        let photographyData = await phhotographyResponse.json();
-
-        let howtoResponse = await fetch('http://localhost:3000/howto');
-        let howData = await howtoResponse.json();
-
+        const [laptopData, PhoneData, tvData, photographyData, howData] = await GetRequest();
 
         this.setState({
             loading: false,
@@ -48,7 +31,6 @@ class FreshNews extends React.Component{
             HowtoData: howData
         })
     }
-
 
     render(){
 
@@ -113,7 +95,6 @@ class FreshNews extends React.Component{
 
                     </div>
 
-                    {console.log(tvsData)}
 
                     <div className="middle-cart-section">
                         <NewsCard size="460x330" image={photographyesData[12].src} hasBg={true} 

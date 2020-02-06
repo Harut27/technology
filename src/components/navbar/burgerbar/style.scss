@@ -39,12 +39,17 @@
         justify-content: center;
         align-items: center;
 
+        .user-icon{
+            font-size: 24px;
+            color: #fff;
+            margin-left: 40px;
+        }
+
         .burgerbar-icons{
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             width: 120px;
-
 
             .facebook-icon,
             .youtube-icon,
@@ -52,7 +57,6 @@
                 font-size: 22px;
                 cursor: pointer;
                 transition: width 1s;
-
             }
 
             .facebook-icon:hover,
