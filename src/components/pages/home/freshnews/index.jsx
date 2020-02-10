@@ -12,7 +12,6 @@ class FreshNews extends React.Component{
     constructor(props){
         super(props)
         this.myRef = React.createRef()
-   
     }
 
 
@@ -23,12 +22,17 @@ class FreshNews extends React.Component{
         phonesData: [],
         tvsData: [],
         photographyesData: [],
-        HowtoData: []
+        HowtoData: [],
+        myRef:[]
     }
 
     async componentDidMount(){
 
+        
+
         const [laptopData, PhoneData, tvData, photographyData, howData] = await GetRequest();
+
+            console.log(this.myRef.current)
 
         this.setState({
             loading: false,
@@ -36,18 +40,18 @@ class FreshNews extends React.Component{
             phonesData: PhoneData,
             tvsData: tvData,
             photographyesData: photographyData,
-            HowtoData: howData
+            HowtoData: howData,
+            myRef: this.myRef.current
             
         })
     }
 
     
+    
 
     render(){
 
-        // if(window.location.pathname == "/admin"){
-        //     console.log( ReactDOM.findDOMNode(this.refs.container)
-        //  }
+        
 
         let {
             loading,
@@ -55,8 +59,13 @@ class FreshNews extends React.Component{
             phonesData,
             tvsData,
             photographyesData,
-            HowtoData
+            HowtoData,
+            myRef
         } = this.state;
+
+        if(window.location.pathname == "/admin"){
+            
+         }
 
         if(loading){
             return <Loading/>
