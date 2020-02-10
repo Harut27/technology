@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import SitebarForAdmin from "./admin-sitebar"
+import SitebarForAdmin from "./admin-sitebar";
+import PhotographyForAdmin from "./Photography-admin"
+import "./style.scss"
 
 
 
@@ -13,6 +15,7 @@ class AdminPage extends Component {
             <div className="AdminPage">
 
                 <SitebarForAdmin/>
+                <PhotographyForAdmin/>
 
             </div>
         )

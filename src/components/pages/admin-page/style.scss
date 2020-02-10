@@ -1,0 +1,22 @@
+.admin-carts{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    
+        .admin-cart{
+            margin: 10px;
+            position: relative;
+            }
+    }
+
+.icons{
+    position: absolute;
+    display: flex;
+    right: 10px;
+    top: -8px;
+    color: #696767;
+    
+    svg{
+        margin-left: 5px;
+    }
+}

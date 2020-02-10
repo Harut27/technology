@@ -5,21 +5,21 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 import "./style.scss";
 
-
 class SitebarForAdmin extends Component{
-
-
 
 
     render(){
 
-        const productsMenu = ['How To','Phones','TVs','Laptops','Photography','News','Posts','Contact Us'];
-        let accountName = 'Gor Stepanyan';
+        const productsMenu = ['Home Page','How To','Phones','TVs','Laptops','Photography','News','Posts','Contact Us'];
+        let accountName = 'Anhayt Bajanord';
 
         return(
             <div className="sitebarForAdmin">
 
                 <div className="accountSection">
+                    <div className="account-image">
+                        <img src="https://s7.orientaltrading.com/is/image/OrientalTrading/PDP_VIEWER_IMAGE_MOBILE$&$NOWA/scarecrow-handprint-craft-kit~13705882" alt=""/>
+                    </div>
                     <span>Admin : {accountName}</span>
                 </div>
 

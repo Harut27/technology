@@ -7,15 +7,21 @@
     padding-left: 20px;
 
     .accountSection{
-        height: 100px;
+        display: flex;
+        flex-direction: column;
+        height: 150px;
         width: 100%;
         color: #a9a6a6;
         margin-top: 15px;
+
+        .account-image img{
+            height: 100px;
+            width: 100px;
+        }
     }
 
     .pagesFromAdmin{
         width: 100%;
-        height: 400px;
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
@@ -45,10 +51,7 @@
 
         a{
             color: #a9a6a6;
-
         }
     }
-
-
 
 }

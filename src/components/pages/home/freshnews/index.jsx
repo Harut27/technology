@@ -1,6 +1,7 @@
 import React from "react";
 import NewsCard from "../../../app_components/news-card";
 import "./style.scss";
+import ReactDOM from "react-dom"
 
 import Sidebar from "../sidebar";
 import Loading from "../../../app_components/loader";
@@ -8,6 +9,13 @@ import GetRequest from "../../../app_components/dataFromBackEnd/index"
 
 
 class FreshNews extends React.Component{
+    constructor(props){
+        super(props)
+        this.myRef = React.createRef()
+   
+    }
+
+
 
     state = {
         loading: true,
@@ -29,10 +37,17 @@ class FreshNews extends React.Component{
             tvsData: tvData,
             photographyesData: photographyData,
             HowtoData: howData
+            
         })
     }
 
+    
+
     render(){
+
+        // if(window.location.pathname == "/admin"){
+        //     console.log( ReactDOM.findDOMNode(this.refs.container)
+        //  }
 
         let {
             loading,
@@ -49,7 +64,7 @@ class FreshNews extends React.Component{
 
     return(
         
-        <div className="freshNews centered">
+        <div ref={this.myRef} className="freshNews centered">
             <div className="freshNewsContainer">
                 <div className="freshNewsContent">
 

@@ -3,10 +3,8 @@
 
 .phones,
 .laptops{
-
     width: 65%;
     margin: 0 auto;
-
     
     .title-text,
     .title-section{
@@ -21,8 +19,6 @@
             font-size: 20px;
             margin: 10px;
         }
-
-        
     }
     .title-photos,
     .laptop-title{
@@ -47,5 +43,12 @@
         background: $blue;
         color: #fff;
     }
+}
 
+.AdminPage{
+    display: flex;
+
+    .admin-content {
+        width: calc(100% - 320px);
+    }
 }

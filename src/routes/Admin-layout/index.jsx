@@ -9,9 +9,10 @@ class AdminLayout extends Component {
     const { component: ChildComponent, ...rest } = this.props;
 
     return (
-      <>
+      <div className="AdminPage">
         <SitebarForAdmin />
-        <div className="content">
+
+        <div className="admin-content">
           <Route
             {...rest}
             render={matchProps => {
@@ -19,7 +20,7 @@ class AdminLayout extends Component {
             }}
           />
         </div>
-      </>
+      </div>
     );
   }
 }

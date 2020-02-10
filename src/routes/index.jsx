@@ -11,10 +11,15 @@ import Phones from "../components/pages/phones";
 import Laptops from "../components/pages/laptops";
 import Tvs from "../components/pages/tvs";
 import Photographyes from "../components/pages/photography";
-import Howto from "../components/pages/howto";
 import PostPage from "../components/pages/post-page"
 import Contact from "../components/pages/contact"
-import AdminPage from "../components/pages/admin-page"
+
+import PhotographyForAdmin from "../components/pages/admin-page/Photography-admin/index";
+import TvsForAdmin from "../components/pages/admin-page/tvs-admin/index";
+import LaptopForAdmin from "../components/pages/admin-page/laptop-admin/index";
+import HowToForAdmin from "../components/pages/admin-page/howTo-admin/index";
+import PhoneForAdmin from "../components/pages/admin-page/phone-admin/index";
+
 
 
 
@@ -36,17 +41,17 @@ const Routes = () => {
         <GuestLayout exact path="/posts" component={PostPage} />;
         <GuestLayout exact path="/posts/:id/info" component={PostPage} />;
 
-
         <AdminLayout exact path="/admin" component={Home} />;
-        <AdminLayout exact path="/admin/news" component={News} />;
-        <AdminLayout exact path="/admin/contactus" component={Contact} />;
-        <AdminLayout exact path="/admin/howto" component={HowTo} />;
-        <AdminLayout exact path="/admin/phones" component={Phones} />;
-        <AdminLayout exact path="/admin/laptops" component={Laptops} />;
-        <AdminLayout exact path="/admin/tvs" component={Tvs} />;
-        <AdminLayout exact path="/admin/photography" component={Photographyes} />;
-        <AdminLayout exact path="/admin/posts" component={PostPage} />;
-        <AdminLayout exact path="/admin/posts/:id/info" component={PostPage} />;
+        <AdminLayout exact path="/admin/homepage" component={Home} />;
+        <AdminLayout exact path="/admin/news" component={PhotographyForAdmin} />;
+        <AdminLayout exact path="/admin/contactus" component={PhotographyForAdmin} />;
+        <AdminLayout exact path="/admin/howto" component={HowToForAdmin} />;
+        <AdminLayout exact path="/admin/phones" component={PhoneForAdmin} />;
+        <AdminLayout exact path="/admin/laptops" component={LaptopForAdmin} />;
+        <AdminLayout exact path="/admin/tvs" component={TvsForAdmin} />;
+        <AdminLayout exact path="/admin/photography" component={PhotographyForAdmin} />;
+        <AdminLayout exact path="/admin/posts" component={PhotographyForAdmin} />;
+        <AdminLayout exact path="/admin/posts/:id/info" component={PhotographyForAdmin} />;
 
       </Switch>
     </Router>
