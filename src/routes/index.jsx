@@ -43,8 +43,8 @@ const Routes = () => {
 
         <AdminLayout exact path="/admin" component={Home} />;
         <AdminLayout exact path="/admin/homepage" component={Home} />;
-        <AdminLayout exact path="/admin/news" component={PhotographyForAdmin} />;
-        <AdminLayout exact path="/admin/contactus" component={PhotographyForAdmin} />;
+        <AdminLayout exact path="/admin/news" component={News} />;
+        <AdminLayout exact path="/admin/contactus" component={Contact} />;
         <AdminLayout exact path="/admin/howto" component={HowToForAdmin} />;
         <AdminLayout exact path="/admin/phones" component={PhoneForAdmin} />;
         <AdminLayout exact path="/admin/laptops" component={LaptopForAdmin} />;

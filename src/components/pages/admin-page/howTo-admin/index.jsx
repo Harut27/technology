@@ -21,6 +21,11 @@ class HowToForAdmin extends Component{
 
         const [laptopData, PhoneData,  photographyData, tvData, howData] = await GetRequest();
 
+
+        
+
+
+
         this.setState({
             loading: false,
             laptopsData: laptopData,

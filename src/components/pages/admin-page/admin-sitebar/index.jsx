@@ -4,17 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 import "./style.scss";
+import "../../../../style.scss";
 
 class SitebarForAdmin extends Component{
 
 
+
     render(){
 
-        const productsMenu = ['Home Page','How To','Phones','TVs','Laptops','Photography','News','Posts','Contact Us'];
+        const productsMenu = ['Home Page','News','How To','Phones','TVs','Laptops','Photography','Posts','Contact Us'];
         let accountName = 'Anhayt Bajanord';
 
         return(
-            <div className="sitebarForAdmin">
+            <div className="sitebarForAdmin sticky">
 
                 <div className="accountSection">
                     <div className="account-image">

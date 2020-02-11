@@ -1,16 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import NewsCard from "../../../app_components/news-card";
 import "./style.scss";
-
-// import laptopsData from "../../../../data-from-backend/laptops-data";
-// import HowtoData from "../../../../data-from-backend/howto-data";
-// import photographyesData from "../../../../data-from-backend/photography-data";
-// import tvsData from "../../../../data-from-backend/tvs-data";
 import Loading from "../../../app_components/loader";
+import GetRequest from "../../../app_components/dataFromBackEnd/index";
 
 
 class HomeNews extends React.Component{
+
+    constructor(props){
+        super(props)
+        this.div = null
+    }
+
+    setRef = (r)=>{
+        if(!r) {return}
+        this.div = r;
+
+        const isAdmin = window.location.pathname.startsWith("/admin");
+
+        if (isAdmin){
+            this.div.style.margin = "0"
+        }
+    }
 
     state = {
         loading: true,
@@ -24,21 +37,7 @@ class HomeNews extends React.Component{
 
     async componentDidMount(){
 
-        let laptopResponse = await fetch('http://localhost:3000/laptops');
-        let laptopData = await laptopResponse.json();
-
-        let phoneResponse = await fetch('http://localhost:3000/phones');
-        let PhoneData = await phoneResponse.json();
-
-        let tvResponse = await fetch('http://localhost:3000/tvs');
-        let tvData = await tvResponse.json();
-
-        let phhotographyResponse = await fetch('http://localhost:3000/photography');
-        let photographyData = await phhotographyResponse.json();
-
-        let howtoResponse = await fetch('http://localhost:3000/howto');
-        let howData = await howtoResponse.json();
-
+        const [laptopData, PhoneData, tvData, photographyData, howData] = await GetRequest()
 
         this.setState({
             loading: false,
@@ -49,7 +48,6 @@ class HomeNews extends React.Component{
             HowtoData: howData
         })
     }
-
 
     render(){
 
@@ -67,7 +65,7 @@ class HomeNews extends React.Component{
         }
     return(
         <div className="homeNews">
-            <div className=" card-wrapper">
+            <div ref={this.setRef} className=" card-wrapper">
 
                 <div className="more-fresh-news">
                     <Link to="/news">View More News >></Link>
@@ -92,7 +90,6 @@ class HomeNews extends React.Component{
                 descriptionLabel={laptopsData[17].descriptionLabel}
                 link={`/posts/${laptopsData[17].id}/info`}
                 />  
-
 
                 <div className="small-cart-wrapper">
                     <NewsCard size="340x350" image={HowtoData[3].src} hasBg={false}

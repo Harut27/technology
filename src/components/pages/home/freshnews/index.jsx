@@ -1,7 +1,6 @@
 import React from "react";
 import NewsCard from "../../../app_components/news-card";
 import "./style.scss";
-import ReactDOM from "react-dom"
 
 import Sidebar from "../sidebar";
 import Loading from "../../../app_components/loader";
@@ -11,10 +10,23 @@ import GetRequest from "../../../app_components/dataFromBackEnd/index"
 class FreshNews extends React.Component{
     constructor(props){
         super(props)
-        this.myRef = React.createRef()
+        this.div = null;
     }
 
+    setRef = (r) => {
+        if (!r) { return; }
+        this.div = r;
 
+        const isAdmin = window.location.pathname.startsWith("/admin");           // tarberak 1
+
+        // const isAdmin = /\/admin.*/.test(window.location.pathname);           // tarberak 2
+        // const isAdmin = window.location.pathname.indexOf("/admin") == 0;      // tarberak 3
+
+        if (isAdmin) {        
+            this.div.style.margin = "0";
+            this.div.style.width = "100%";
+        }
+    };
 
     state = {
         loading: true,
@@ -23,16 +35,11 @@ class FreshNews extends React.Component{
         tvsData: [],
         photographyesData: [],
         HowtoData: [],
-        myRef:[]
     }
 
     async componentDidMount(){
 
-        
-
         const [laptopData, PhoneData, tvData, photographyData, howData] = await GetRequest();
-
-            console.log(this.myRef.current)
 
         this.setState({
             loading: false,
@@ -40,18 +47,11 @@ class FreshNews extends React.Component{
             phonesData: PhoneData,
             tvsData: tvData,
             photographyesData: photographyData,
-            HowtoData: howData,
-            myRef: this.myRef.current
-            
+            HowtoData: howData
         })
     }
 
-    
-    
-
     render(){
-
-        
 
         let {
             loading,
@@ -59,13 +59,8 @@ class FreshNews extends React.Component{
             phonesData,
             tvsData,
             photographyesData,
-            HowtoData,
-            myRef
+            HowtoData
         } = this.state;
-
-        if(window.location.pathname == "/admin"){
-            
-         }
 
         if(loading){
             return <Loading/>
@@ -73,7 +68,7 @@ class FreshNews extends React.Component{
 
     return(
         
-        <div ref={this.myRef} className="freshNews centered">
+        <div ref={this.setRef} className="freshNews centered">
             <div className="freshNewsContainer">
                 <div className="freshNewsContent">
 
