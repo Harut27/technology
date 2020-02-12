@@ -4,7 +4,8 @@ import GetRequest from "../../../app_components/dataFromBackEnd";
 import Loading from "../../../app_components/loader";
 import NewsCard from "../../../app_components/news-card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit,faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faEdit,faTrash,faPlus } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 
 class HowToForAdmin extends Component{
 
@@ -20,11 +21,6 @@ class HowToForAdmin extends Component{
     async componentDidMount(){
 
         const [laptopData, PhoneData,  photographyData, tvData, howData] = await GetRequest();
-
-
-        
-
-
 
         this.setState({
             loading: false,
@@ -53,6 +49,14 @@ class HowToForAdmin extends Component{
 
         return(
             <div className="admin-carts">
+                <div className="newHowTo-section">
+
+                  <Link to={`howto/newpost`}>
+                    <FontAwesomeIcon icon={faPlus}/>
+                    <span>Add New How To</span>
+                  </Link>
+
+                </div>
                 {
                     HowtoData.map((howTo,index)=>{
                         return(

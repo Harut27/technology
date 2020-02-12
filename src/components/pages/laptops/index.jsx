@@ -27,9 +27,13 @@ class Laptops extends React.Component {
 
         let { loading, laptopsData } = this.state;
 
-        if (loading) {
-            return <Loading />
-        }
+        // if (loading) {
+        //     return <Loading />
+        // }
+
+        if(!laptopsData.length){
+            return <Loading/>
+         }
 
         return (
             <div className="laptops">

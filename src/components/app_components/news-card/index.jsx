@@ -26,6 +26,8 @@ const NewsCard = ({
         `}
     >
       <Link to={link}>
+
+        
         <img src={image} alt="" />
       </Link>
       <Link to={link}>

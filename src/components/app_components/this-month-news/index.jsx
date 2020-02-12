@@ -10,6 +10,7 @@ import phonesData from "../../../data-from-backend/phones-data";
 import photographyesData from "../../../data-from-backend/photography-data";
 import tvsData from "../../../data-from-backend/tvs-data";
 import GetRequest from "../dataFromBackEnd";
+import Loader from "../loader";
 
 
 
@@ -27,6 +28,8 @@ class ThisMonthsNews extends React.Component{
 
     async componentDidMount(){
 
+
+
         const [laptopsData,HowtoData,phonesData,photographyesData,tvsData] = await GetRequest();
 
         this.setState({
@@ -40,6 +43,8 @@ class ThisMonthsNews extends React.Component{
 
     render(){
 
+
+
         let {
                 laptopsData,
                 HowtoData,
@@ -48,12 +53,18 @@ class ThisMonthsNews extends React.Component{
                 tvsData
         } = this.state;
     
+        if(!HowtoData.length){
+           return <Loader/>
+        }
+
     return(
         <div className="this-Months-News">
 
             <div className="this-months-news-title">
                 <h3>This Month's News</h3>
             </div>
+
+            
 
             
                 <NewsCard size="300x300" image={HowtoData[6].src} hasBg={true}

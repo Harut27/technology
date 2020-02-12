@@ -19,6 +19,8 @@ import TvsForAdmin from "../components/pages/admin-page/tvs-admin/index";
 import LaptopForAdmin from "../components/pages/admin-page/laptop-admin/index";
 import HowToForAdmin from "../components/pages/admin-page/howTo-admin/index";
 import PhoneForAdmin from "../components/pages/admin-page/phone-admin/index";
+import NewPostForAdmin from "../components/pages/admin-page/newPost-admin";
+
 
 
 
@@ -50,6 +52,7 @@ const Routes = () => {
         <AdminLayout exact path="/admin/laptops" component={LaptopForAdmin} />;
         <AdminLayout exact path="/admin/tvs" component={TvsForAdmin} />;
         <AdminLayout exact path="/admin/photography" component={PhotographyForAdmin} />;
+        <AdminLayout exact path="/admin/howto/newpost" component={NewPostForAdmin} />;
         <AdminLayout exact path="/admin/posts" component={PhotographyForAdmin} />;
         <AdminLayout exact path="/admin/posts/:id/info" component={PhotographyForAdmin} />;
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router";
-import SitebarForAdmin from "../../components/pages/admin-page/admin-sitebar";
+import SitebarForAdmin from "../../components/pages/admin-page/admin-components/admin-sitebar";
 
 
 
