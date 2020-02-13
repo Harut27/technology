@@ -1,11 +1,16 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit,faTrash,faPlus } from '@fortawesome/free-solid-svg-icons'
+
 import "../style.scss";
 import GetRequest from "../../../app_components/dataFromBackEnd";
 import Loading from "../../../app_components/loader";
 import NewsCard from "../../../app_components/news-card";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit,faTrash,faPlus } from '@fortawesome/free-solid-svg-icons'
-import { Link } from "react-router-dom";
+import NewPost from "../../admin-page/admin-components/admin-newPost"
+
+
 
 class HowToForAdmin extends Component{
 
@@ -49,14 +54,8 @@ class HowToForAdmin extends Component{
 
         return(
             <div className="admin-carts">
-                <div className="newHowTo-section">
-
-                  <Link to={`howto/newpost`}>
-                    <FontAwesomeIcon icon={faPlus}/>
-                    <span>Add New How To</span>
-                  </Link>
-
-                </div>
+               
+                    <NewPost path="/howto"/>
                 {
                     HowtoData.map((howTo,index)=>{
                         return(

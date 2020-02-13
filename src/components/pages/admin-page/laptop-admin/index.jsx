@@ -3,8 +3,10 @@ import "../style.scss";
 import GetRequest from "../../../app_components/dataFromBackEnd";
 import Loading from "../../../app_components/loader";
 import NewsCard from "../../../app_components/news-card";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit,faTrash } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit,faTrash } from '@fortawesome/free-solid-svg-icons';
+import NewPost from "../../admin-page/admin-components/admin-newPost";
+
 
 class LaptopForAdmin extends Component{
 
@@ -48,10 +50,14 @@ class LaptopForAdmin extends Component{
 
         return(
             <div className="admin-carts">
+
+                <NewPost path="/laptop"/>
+
                 {
                     laptopsData.map((laptop,index)=>{
                         return(
                             <div className="admin-cart" key={index}>
+
                                 <NewsCard size="300x300" image={laptop.src} hasBg={true}
                                 title={laptop.title}
                                 link={`/posts/${laptop.id}/info`}

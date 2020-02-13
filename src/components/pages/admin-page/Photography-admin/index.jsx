@@ -5,6 +5,8 @@ import Loading from "../../../app_components/loader";
 import NewsCard from "../../../app_components/news-card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit,faTrash } from '@fortawesome/free-solid-svg-icons'
+import NewPost from "../../admin-page/admin-components/admin-newPost";
+
 
 class PhotographyForAdmin extends Component{
 
@@ -48,6 +50,9 @@ class PhotographyForAdmin extends Component{
 
         return(
             <div className="admin-carts">
+
+                <NewPost path="/photography"/>
+
                 {
                     tvsData.map((tv,index)=>{
                         return(

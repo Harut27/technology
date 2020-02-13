@@ -1,27 +1,23 @@
 import React, { Component } from "react";
-import Link from "react-router-dom";
+import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import "./style.scss"
 
 
-class NewPost extends Component{
-
-    render(){
-
+const NewPost = ({path})=>{
 
         return(
-            <div className="newHowTo-section">
+            <div className="newPost-section">
 
-                <Link to={`howto/newpost`}>
+                <Link to={`/admin${path}/newpost`}>
                     <FontAwesomeIcon icon={faPlus}/>
                     <span>Add New Post</span>
                 </Link>
 
             </div>
         )
-    }
 }
-
 
 export default NewPost;
 

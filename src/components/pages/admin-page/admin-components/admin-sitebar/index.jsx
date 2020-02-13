@@ -12,7 +12,7 @@ class SitebarForAdmin extends Component{
 
     render(){
 
-        const productsMenu = ['Home Page','News','How To','Phones','TVs','Laptops','Photography','Posts','Contact Us'];
+        const productsMenu = ['Home Page','News','How To','Phones','TVs','Laptops','Photography','Contact Us'];
         let accountName = 'Anhayt Bajanord';
 
         return(
