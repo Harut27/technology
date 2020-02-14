@@ -1,65 +1,72 @@
-import React, { Component } from 'react';
+import React, {  useState } from 'react';
 import CKEditor from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import ReactHtmlParser from "react-html-parser";
+import "./style.scss";
 
-class NewPostForAdmin extends Component {
-    render() {
+const NewPostForAdmin = ()=>{
+
+
+
+    const [titleValue, setTitleValue] = useState('')
+
+    const handleOnChange = (e , editor)=>{
+
+        const data = editor.getData()
+        setTitleValue(data)
+        
+    }
+
+
         return (
-                <div className="post-wrapper">
+                <div className="admin-new-post flex-column">
       
-                    <div className="title-wrapper">
+                    <div className="flex-column">
                         
-                        <h2>
-                            <CKEditor
-                                editor={ ClassicEditor }
-                                data="<p>Please type your TITLE</p>"
-                                onInit={ editor => {
-                                
-                                } }
-                                onChange={ ( event, editor ) => {
-                                    const data = editor.getData();
-                                    console.log( { event, editor, data } );
-                                } }
-                                onBlur={ ( event, editor ) => {
-                                    console.log( 'Blur.', editor );
-                                } }
-                                onFocus={ ( event, editor ) => {
-                                    console.log( 'Focus.', editor );
-                                } }
-                            />
-                        </h2>
+                        <div className="flex-column">
+                            <span className="spanTitle">Please write your TITLE</span>
+                            <h2>
+                                <CKEditor
+                                    editor={ ClassicEditor }
+                                    onChange={handleOnChange}
+                                />
+                            </h2>
+                        </div>
+
+                        <div>
+                            {ReactHtmlParser(titleValue)}
+                        </div>
         
-                        <span className="category">
-                            Category - 
-                        </span>
+                        <div className="flex-column">
+                            <span className="spanTitle">Please write your CATEGORY</span>
+                            <span>
+                                <CKEditor
+                                    editor={ ClassicEditor }
+                                />
+                            </span>
+                        </div>
         
-                        <span className="subtittle">
-                            
-                        </span>
+                        <div className="flex-column">
+                            <span className="spanTitle">Please write your SUBTITLE</span>
+                            <span>
+                                <CKEditor
+                                    editor={ ClassicEditor }
+                                />
+                            </span>
+                        </div>
       
                     </div>
       
                     <img src={`#`} alt=""/>
       
-                    <div className="post-content">
+                    <div className="">
                       {/* <div dangerouslySetInnerHTML={{ __html:post.content}} /> */}
                     </div>
       
                 </div>
                
           
-
-
-
-
-
-
-
-
-
-
         );
-    }
 }
 
 export default NewPostForAdmin;
